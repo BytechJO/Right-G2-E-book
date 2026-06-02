@@ -5,20 +5,20 @@ import TopNavbar from "./Book/Navbar/TopNavbar";
 import BottomBar from "./Book/Navbar/BottomBar";
 import LeftSidebar from "./Book/Sidebars/LeftSidebar";
 import RightSidebar from "./Book/Sidebars/RightSidebar";
+import "../index.css"
 // === cover img ===
-import workbookCover from "../assets/imgs/pages/workbook-cover.png";
-import stbookCover from "../assets/imgs/pages/classbook-cover.png";
-import teacherBookCover from "../assets/imgs/pages/Right InternationalTB/Page_001.png";
-import fcBookCover from "../assets/imgs/pages/flach-card/Flashcards Grade 2_Page_01.png";
-import posterBookCover from "../assets/imgs/pages/posters/Right G2 Poster 48x33_Page_01.png";
+import workbookCover from "../assets/imgs/pages/classbook-cover.png";
+import stbookCover from "../assets/imgs/pages/workbook-cover.png";
+// import teacherBookCover from "../assets/imgs/pages/Right InternationalTB/Right 2nd edition TB G3_Page_001.png";
+// import flashCardBookCover from "../assets/imgs/pages/flach-card/Right 2nd edition Flashcards G3_Page_01.png";
+// import posterBookCover from "../assets/imgs/pages/posters/Right G2 Poster 48x33_Page_01.png"
+
 // === VIEWERS ===
-import FlashCardViewer from "./FlashCardPages/FlashCardPages";
+// import FlashCardViewer from "./FlashCardPages/FlashCardPages";
 
 // === POPUP ===
 import Popup from "./Popup/Popup";
 import LessonNavigator from "./StudentPages/LessonNavigator";
-// import teacherPdf from "../../public/Right International TB G2-Apple’s iMac (3).pdf";
-import teacherPdf from "../assets/Teacher book G2.pdf";
 // === ASSETS ===
 import logo from "../assets/Page 01/PMAAlogo.svg";
 import menu from "../assets/Page 01/menu.svg";
@@ -38,13 +38,15 @@ import pauseBtn from "../assets/Page 01/Right Video Button.svg";
 import {
   studentPages,
   workbookPages,
-  teacherPages,
-  flashPages,
+  // teacherPages,
+  // flashPages,
 } from "./BookData";
-
 import WorkBookNavigator from "./WorkBookPages/WorkBookNavigator";
-import { postersVocabPages } from "./BookData/postersVocabPages";
-import TeacherBook from "./TeacherBookPages/TeacherBook";
+// import { postersVocabPages } from "./BookData/postersVocabPages";
+
+// import PosterVocabNavigator from "./PostersVocabPages/PosterVocabNavigator";
+// import TeacherBook from "./TeacherBookPages/TeacherBook";
+
 
 export default function Book() {
   // ===========================================================
@@ -78,12 +80,12 @@ export default function Book() {
   const pages = {
     student: studentPages(openPopup, goToUnit),
     work: workbookPages(openPopup, goToUnit),
-    teacher: teacherPages.map((t) => <TeacherBook teacher={t} />),
-    flash: flashPages,
+    // teacher: teacherPages.map((t) => <TeacherBook teacher={t} />),
+    // flash: flashPages,
     // poster: posterPages.map((p) => (
     //   <PosterViewer poster={p} openPopup={openPopup} />
     // )),
-    posterVocab: postersVocabPages(openPopup, goToUnit),
+    // posterVocab: postersVocabPages(openPopup, goToUnit),
   }[activeTab];
 
   // ===========================================================
@@ -121,8 +123,8 @@ export default function Book() {
     localStorage.setItem("activeTab", activeTab);
     localStorage.setItem("pageIndex", pageIndex);
     if (
-      activeTab === "poster" ||
-      activeTab === "flash" ||
+      // activeTab === "poster" ||
+      // activeTab === "flash" ||
       activeTab === "posterVocab"
     ) {
       setViewMode("single"); // بوستر = صفحة واحدة دائمًا
@@ -335,115 +337,106 @@ export default function Book() {
     { id: 10, label: "Unit 10", start: 57, pages: 6 },
   ];
 
-  const teacherUnits = [
-    {
-      id: 1,
-      label: "Introduction",
-      start: 4,
-      pages: 34,
-    },
-    {
-      id: 2,
-      label: "Unit 1",
-      start: 39,
-      pages: 10,
-    },
-    {
-      id: 3,
-      label: "Unit 2",
-      start: 50,
-      pages: 11,
-    },
-    {
-      id: 4,
-      label: "Unit 3",
-      start: 62,
-      pages: 9,
-    },
-    {
-      id: 5,
-      label: "Unit 4",
-      start: 72,
-      pages: 11,
-    },
-    {
-      id: 6,
-      label: "Unit 5",
-      start: 84,
-      pages: 9,
-    },
-    {
-      id: 7,
-      label: "Unit 6",
-      start: 93,
-      pages: 12,
-    },
-    {
-      id: 8,
-      label: "Unit 7",
-      start: 106,
-      pages: 9,
-    },
+  // const teacherUnits = [
+  //   {
+  //     id: 1,
+  //     label: "Introduction",
+  //     start: 4,
+  //     pages: 34,
+  //   },
+  //   {
+  //     id: 2,
+  //     label: "Unit 1",
+  //     start: 39,
+  //     pages: 10,
+  //   },
+  //   {
+  //     id: 3,
+  //     label: "Unit 2",
+  //     start: 50,
+  //     pages: 11,
+  //   },
+  //   {
+  //     id: 4,
+  //     label: "Unit 3",
+  //     start: 62,
+  //     pages: 9,
+  //   },
+  //   {
+  //     id: 5,
+  //     label: "Unit 4",
+  //     start: 72,
+  //     pages: 11,
+  //   },
+  //   {
+  //     id: 6,
+  //     label: "Unit 5",
+  //     start: 84,
+  //     pages: 9,
+  //   },
+  //   {
+  //     id: 7,
+  //     label: "Unit 6",
+  //     start: 93,
+  //     pages: 12,
+  //   },
+  //   {
+  //     id: 8,
+  //     label: "Unit 7",
+  //     start: 106,
+  //     pages: 9,
+  //   },
 
-    {
-      id: 9,
-      label: "Unit 8",
-      start: 115,
-      pages: 13,
-    },
-    {
-      id: 10,
-      label: "Unit 9",
-      start: 128,
-      pages: 8,
-    },
-    {
-      id: 11,
-      label: "Unit 10",
-      start: 136,
-      pages: 12,
-    },
-    {
-      id: 12,
-      label: "Teaching Contractions",
-      start: 149,
-      pages: 3,
-    },
-    {
-      id: 13,
-      label: "Instructions and Answer Keys",
-      start: 153,
-      pages: teacherPages.length - 152,
-    },
-  ];
+  //   {
+  //     id: 9,
+  //     label: "Unit 8",
+  //     start: 115,
+  //     pages: 13,
+  //   },
+  //   {
+  //     id: 10,
+  //     label: "Unit 9",
+  //     start: 128,
+  //     pages: 8,
+  //   },
+  //   {
+  //     id: 11,
+  //     label: "Unit 10",
+  //     start: 136,
+  //     pages: 24,
+  //   },
+  //   {
+  //     id: 12,
+  //     label: "Teaching Contractions",
+  //     start: 160,
+  //     pages: 3,
+  //   },
+  //   {
+  //     id: 13,
+  //     label: "Instructions and Answer Keys",
+  //     start: 169,
+  //     pages: teacherPages.length - 152,
+  //   },
+  // ];
 
-  const flashUnits = [
-    { id: 1, label: "Flashcards", start: 2, pages: flashPages.length },
-  ];
+  // const flashUnits = [
+  //   { id: 1, label: "Flashcards", start: 2, pages: flashPages.length },
+  // ];
 
   // const posterUnits = [
   //   { id: 1, label: "Posters", start: 2, pages: posterPages.length },
   // ];
-  const posterVocabUnits = [
-    { id: 1, label: "Unit 1", start: 2, pages: 1 },
-    { id: 2, label: "Unit 2", start: 3, pages: 1 },
-    { id: 3, label: "Unit 3", start: 4, pages: 1 },
-    { id: 4, label: "Unit 4", start: 5, pages: 1 },
-    { id: 5, label: "Unit 5", start: 6, pages: 1 },
-    { id: 6, label: "Unit 6", start: 7, pages: 1 },
-    { id: 7, label: "Unit 7", start: 8, pages: 1 },
-    { id: 8, label: "Unit 8", start: 9, pages: 1 },
-    { id: 9, label: "Unit 9", start: 10, pages: 1 },
-    { id: 10, label: "Unit 10", start: 11, pages: 1 },
-  ];
+  // const posterVocabUnits = [
+  //   { id: 1, label: "Posters", start: 2, pages: postersVocabPages().length },
+  // ];
 
   // ===========================================================
   //                 📌 PAGE RENDERER
   // ===========================================================
   function renderPage(content) {
-    if (activeTab === "flash") {
-      return <FlashCardViewer card={content} openPopup={openPopup} />;
-    }
+    // if (activeTab === "flash") {
+    //   return <FlashCardViewer card={content} openPopup={openPopup} />;
+    // }
     if (typeof content === "string") {
       return <img src={content} className="w-full h-full object-contain" />;
     }
@@ -464,10 +457,10 @@ export default function Book() {
   const sidebarUnits = {
     student: studentUnits,
     work: workbookUnits,
-    teacher: teacherUnits,
-    flash: flashUnits,
+    // teacher: teacherUnits,
+    // flash: flashUnits,
     // poster: posterUnits,
-    posterVocab: posterVocabUnits,
+    // posterVocab: posterVocabUnits,
   }[activeTab];
 
   const studentBookInfo = {
@@ -482,35 +475,35 @@ export default function Book() {
     pages: workbookPages().length,
   };
 
-  const teacherInfo = {
-    cover: teacherBookCover,
-    title: "Right 2 Teacher's Book",
-    pages: teacherPages.length,
-  };
+  // const teacherInfo = {
+  //   cover: teacherBookCover,
+  //   title: "Right 2 Teacher's Book",
+  //   pages: teacherPages.length,
+  // };
 
-  const flashInfo = {
-    cover: fcBookCover,
-    title: "Right 2 flashcard",
-    pages: flashPages.length,
-  };
+  // const flashInfo = {
+  //   cover: flashCardBookCover,
+  //   title: "Right 2 flashcard",
+  //   pages: flashPages.length,
+  // };
 
   // const posterInfo = {
   //   cover: posterBookCover,
   //   title: "Right 1 Grammar Poster",
   //   pages: posterPages.length,
   // };
-  const posterVocabInfo = {
-    cover: posterBookCover,
-    title: "Right 2 Posters",
-    pages: postersVocabPages().length,
-  };
+  // const posterVocabInfo = {
+  //   // cover: flashCardBookCover,
+  //   title: "Right 2 Posters",
+  //   pages: postersVocabPages().length,
+  // };
   const bookInfoSelector = {
     student: studentBookInfo,
     work: workbookInfo,
-    teacher: teacherInfo,
-    flash: flashInfo,
+    // teacher: teacherInfo,
+    // flash: flashInfo,
     // poster: posterInfo,
-    posterVocab: posterVocabInfo,
+    // posterVocab: posterVocabInfo,
   };
   const isLastPage = pageIndex === pages.length - 1;
   const isLastSpread = viewMode === "spread" && pageIndex === pages.length - 2;
@@ -571,8 +564,8 @@ export default function Book() {
         {/* POSTERS ALWAYS SINGLE PAGE */}
         {isMobile ||
         // activeTab === "poster" ||
-        activeTab === "posterVocab" ||
-        activeTab === "flash" ||
+        // activeTab === "posterVocab" ||
+        // activeTab === "flash" ||
         viewMode === "single" ||
         pageIndex === 0 ||
         isLastPage ||
@@ -633,7 +626,7 @@ export default function Book() {
           openRightSidebar: () => setRightBarOpen(true),
           keyIcon: FaKey,
         }}
-        teacherPdf={teacherPdf} // 👈 جديد
+        // teacherPdf={teacherPdf}
       />
 
       {/* ===================== LEFT SIDEBAR ===================== */}
@@ -667,6 +660,8 @@ export default function Book() {
             mode="workbook"
           />
         )}
+
+
 
         {/* ========== STUDENT + TEACHER ONLY ========== */}
         {(popupContent?.tab === "student" || popupContent?.tab === "teacher") &&
