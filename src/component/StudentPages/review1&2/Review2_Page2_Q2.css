@@ -1,0 +1,83 @@
+/* الكونتينر العام */
+.wh-container-CB-review2-p2-q2 {
+  display: flex;
+ flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 10px;
+      /* justify-content: center; */
+}
+
+/* كل عنصر */
+.ck-x-item-CB-review2-p2-q2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* الصورة داخل مربع */
+.ck-x-image-CB-review2-p2-q2 {
+    width: 160px;
+    height: 120px;
+    object-fit: contain;
+    border: 2px solid #e53935;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+}
+
+/* خيارات ck / x */
+.ck-x-options-CB-review2-p2-q2 {
+ display: flex;
+    gap: 6px;
+    background: #f8e4db;
+    /* padding: 6px 12px; */
+    border-radius: 12px;
+    height: 50px;
+    width: 89%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 14%;
+}
+
+/* شكل الزر */
+.ck-x-option-CB-review2-p2-q2 {
+  min-width: 55px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #f8e4db;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+/* تأثير الدائرة عند الاختيار */
+.ck-x-option-CB-review2-p2-q2.selected {
+  border: 2px solid #e53935;
+  /* background: white; */
+  font-weight: bold;
+}
+
+/* إذا الإجابة غلط */
+.ck-x-option-CB-review2-p2-q2.wrong-answer {
+  border: 2px solid red;
+}
+
+/* علامة الخطأ */
+.wrong-x-CB-review2-p2-q2 {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}

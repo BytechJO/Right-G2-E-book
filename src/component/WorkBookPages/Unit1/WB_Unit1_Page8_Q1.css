@@ -1,0 +1,116 @@
+.input-wrapper-wb-unit1-page8-q1{
+width: 30px;
+position: relative;
+
+}
+
+.unscramble-row-wb-unit1-p8-q1 {
+  display: grid;
+  gap: 70px;
+  justify-content: space-around;
+  width: 100%;
+  /* margin-top: 30px; */
+  grid-template-columns: repeat(3, 1fr);
+}
+.img-box-wb-unit1-p8-q1 img {
+    width: auto;
+    height: 90px;
+    /* object-fit: fill; */
+}
+
+
+/* input فوق */
+
+/* النص + الصورة */
+.WB-unit1-p8-q1-middle-section {
+  display: flex;
+ 
+  align-items: center;
+  gap: 5px;
+}
+
+.WB-unit1-p8-q1-pattern {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* الخيارات تحت */
+.WB-unit1-p8-q1-choices {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.WB-unit1-p8-q1-choice-btn {
+  /* padding: 6px 14px; */
+  border: 1px solid #bbbbbb;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  height: 40px;
+  width:40px
+}
+
+.WB-unit1-p8-q1-choice-btn.selected {
+    border: 2px solid #2c5287;
+
+  /* color: white; */
+}
+
+.WB-unit1-p8-q1-input {
+    flex: 1;
+    min-height: 22px;
+    border-bottom: 1.5px solid #000;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 2px 4px;
+    position: relative;
+    width: 100%;
+}
+.input-row-wb-unit1-p8-q1{
+    display: flex;
+    gap: 10px;
+        align-items: center;
+}
+
+.error-icon-wb-unit1-p8-q1{
+     position: absolute;
+  right: -12px;       /* يظهر بجانب الصندوق */
+  top: -3%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid white;
+  font-size: 14px;
+  font-weight: bold; 
+}
+
+.wrong-icon-wb-unit1-p8-q2 {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: red;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border: 2px solid white;
+
+}

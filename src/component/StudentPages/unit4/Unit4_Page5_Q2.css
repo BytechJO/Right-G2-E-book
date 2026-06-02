@@ -1,0 +1,50 @@
+.blank-options-CB-unit4-p5-q2 {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    flex-direction: column;
+    position: relative;
+    /* padding-right: 20px; */
+    /* border-right: 2px solid; */
+    height: 100px;
+    /* width: 28%; */
+    justify-content: space-between;
+}
+.option-word-CB-unit3-p6-q1{
+   padding: 4px 10px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+.option-word-CB-unit3-p6-q1.selected {
+    /* color: white; */
+  
+    border-color:  #2c5287;
+    transition: 0.2s ease;
+}
+.sentence-CB-unit4-p5-q2 {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    font-size: 22px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.wrong-mark-CB-unit4-p5-q2 {
+  position: absolute;
+    top: 22px;
+    right: 69px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}

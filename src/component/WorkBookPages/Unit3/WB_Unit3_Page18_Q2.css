@@ -1,0 +1,29 @@
+.WB-unit3-page18-q2-word {
+  display: inline-block;
+
+  padding: 4px 6px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.WB-unit3-page18-q2-word {
+  width: 150px; /* نفس عرض الصور */
+  height: 90px; /* نفس الارتفاع */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 8px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+
+.WB-unit3-page18-q2-word:active {
+  transform: scale(0.97);
+}
