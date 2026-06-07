@@ -147,7 +147,7 @@ const captionsExample = [
         </svg>
       </div>
 
-      <div
+      {/* <div
         className="pauseBtn-icon-CD-page21 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >
@@ -187,7 +187,7 @@ const captionsExample = [
         >
           <image className="svg-img" href={pauseBtn} x="0" y="0" width="90" height="90" />
         </svg>
-      </div>
+      </div> */}
       <audio ref={audioRef} style={{ display: "none" }} />
     </div>
   );

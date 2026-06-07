@@ -137,7 +137,7 @@ const Reading_Unit6_Page1 = ({ openPopup }) => {
         </svg>
       </div>
 
-      <div
+      {/* <div
         className="pauseBtn-icon-CD-page21 hover:scale-110 transition"
         style={{ overflow: "visible" }}
       >
@@ -184,7 +184,7 @@ const Reading_Unit6_Page1 = ({ openPopup }) => {
             height="90"
           />
         </svg>
-      </div>
+      </div> */}
       <audio ref={audioRef} style={{ display: "none" }} />
     </div>
   );
